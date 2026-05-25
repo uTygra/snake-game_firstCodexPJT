@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="scoreboard" aria-label="Game scores">
+        <div>
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span class="label">High Score</span>
+          <strong id="high-score">0</strong>
+        </div>
+      </section>
+
+      <section class="screen" aria-label="Snake game board">
+        <canvas id="game-board" width="480" height="480"></canvas>
+
+        <div id="game-over" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="game-over-title">
+          <div class="overlay-panel">
+            <p class="pixel-kicker">Game Over</p>
+            <h1 id="game-over-title">Snake crashed</h1>
+            <p id="final-score">Score: 0</p>
+            <button id="restart-button" type="button">Restart</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="controls" aria-label="Controls">
+        <span>Use arrow keys</span>
+        <span>Eat food</span>
+        <span>Avoid walls and yourself</span>
+      </footer>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
